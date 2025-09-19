@@ -1,13 +1,13 @@
-function App() {
-
-
+import React from 'react';
+import UserContextProvider from './context/UserContextProvider';
+import { RouterProvider } from 'react-router-dom';
+import router from './router/routerConfig';
+const App : React.FC = () => {
   return (
-    <>
-      <h1 className={'text-lime-500'}>
-          Hi, Tailwind is working
-      </h1>
-    </>
+    <UserContextProvider>
+      <RouterProvider router={router} />
+    </UserContextProvider>
   )
 }
 
-export default App
+export default App;
